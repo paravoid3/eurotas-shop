@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
+
+header {
+  position: relative;
+}
+
+.container {
+  max-width: 1600px;
+  width: 100%;
+  margin: auto;
+}
+
+.bgimg img {
+  max-width: 100%;
+  height: auto;
+  /* object-fit: cover; */
+}
+
+.brand {
+    max-width: 140px;
+}
+
+.heading {
+  position: absolute;
+  left: 45%;
+  top: 35%;
+  color: white;
+}
+
+.heading h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+}
+.heading p {
+  font-size: 1em;
+  font-weight: 100;
+}
+
+/* .aside-content {
+  padding: 0;
+} */
+
+.aside-content h4 {
+  font-weight: bold;
+}
+
+.aside-content .categories .nav .nav-item {
+  padding: 10px 0;
+}
+
+.aside-content .price-filter .btn {
+  font-size: 16px;
+  color: grey;
+  padding: 12px 32px;
+}
+
+.aside-content .price-filter .btn:hover {
+  color: white;
+}
+
+.aside-content .color-filter .colors,
+.aside-content .size-filter .sizes,
+.aside-content .product-tags .tags {
+  width: 100%;
+  height: auto;
+}
+
+.aside-content .color-filter .colors div{
+  width: 45px;
+  height: 45px;
+  background: black;
+  border-radius: 50%;
+  border: 2px solid #ebebeb;
+  margin: 5px 8px 5px 0;
+  cursor: pointer;
+}
+
+.aside-content .color-filter .colors div:hover{
+  border: 4px solid crimson;
+}
+
+.aside-content .size-filter .sizes div {
+  width: 75px;
+  height: 75px;
+  color: #666;
+  margin: 0 1px 1px 0;
+  border: 2px solid #ebebeb;
+  text-align: center;
+  line-height: 4;
+  transition: color .4s ease;
+  cursor: pointer;
+}
+
+.aside-content .size-filter .sizes div:hover {
+  color: crimson;
+}
+
+.aside-content .product-tags .tags span {
+  display: block;
+  font-size: 14px;
+  background: #ebebeb;
+  margin-bottom: 1em;
+  padding: 15px 20px;
+}
+
+
+
+
+
+
+
+/* FOR TABLET SCREEN SIZES */
+@media screen and (min-width: 768px) {
+  .heading h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+  }
+  .heading p {
+    font-size: 1.5em;
+    font-weight: 100;
+  }
+}
+
+
+/* FOR DESKTOP SCREEN SIZES */
+
+@media screen and (min-width: 992px) {
+    .navbar-brand {
+        width: 15%;
+    }
+
+    .search {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 30px;
+        padding: 7px;
+        margin-right: 20px;
+        position: relative;
+    }
+
+    .search button {
+        position: absolute;
+        right: 10px;
+        color: white;
+        background: none;
+        bordeR: none;
+    }
+
+    input[type="search"] {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background: none;
+        color: #fff;
+    }
+
+    input[type="search"]::placeholder {
+      color: white;
+    }
+
+    .navbar i {
+        margin-left: 15px;
+    }
+
+
+}
+
+
+/* navbar adjustment */
+@media screen and (max-width: 1036px) and (min-width: 992px) {
+    .navbar ul {
+        visibility: hidden;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding: 0;
+    }
+}
