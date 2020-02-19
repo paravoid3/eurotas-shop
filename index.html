@@ -21,8 +21,9 @@
       <div class="container">
         <a class="navbar-brand" href="#"><img class="brand"
             src="http://blueskytechco.com/eurotas/wp-content/uploads/2019/12/logo-new.png" alt="brand"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent//REMOVETHIS"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent//REMOVETHIS" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -78,9 +79,9 @@
   </header>
 
   <article>
-    <aside>
-      <div class="container mt-5">
-        <div class="aside-content col-12 col-lg-3">
+    <div class="container mt-5">
+      <div class="row">
+        <aside class="aside-content col-12 col-lg-3">
           <div class="categories">
             <h4>Categories</h4>
             <hr>
@@ -99,13 +100,14 @@
             <hr>
             <form>
               <div class="form-group">
-               <input type="range" class="form-control-range slider" id="formControlRange slider">
-            </div>
+                <input type="range" class="form-control-range slider" id="formControlRange" min="0" max="250"
+                  value="250" step="10">
+              </div>
             </form>
             <div class="btn btn-outline-danger">Filter</div>
-            <span class="text-secondary ml-4">$250</span>
+            <span class="price-range text-secondary">Price: <span class="price-number">$0 — $250</span></span>
           </div>
-        <div class="color-filter my-5">
+          <div class="color-filter my-5">
             <h4>Filter By Color</h4>
             <hr>
             <div class="colors d-flex flex-wrap">
@@ -126,7 +128,8 @@
               <div></div>
               <div></div>
             </div>
-        </div><div class="size-filter mt-5">
+          </div>
+          <div class="size-filter mt-5">
             <h4>Filter By Size</h4>
             <hr>
             <div class="sizes d-flex flex-wrap">
@@ -146,7 +149,8 @@
               <div>6.5</div>
               <div>6.0</div>
             </div>
-        </div><div class="product-tags py-5">
+          </div>
+          <div class="product-tags py-5">
             <h4>Product Tags</h4>
             <hr>
             <div class="tags d-flex flex-wrap justify-content-between">
@@ -156,10 +160,30 @@
               <span>Shoes</span>
               <span>Women</span>
             </div>
-        </div>
-        </div>
+          </div>
+        </aside>
+
+        <section class="section-content col-12 col-lg-9">
+          <div class="d-flex flex-row flex-wrap justify-content-between align-items-center mt-2">
+            <span class="results">Showing 1–15 of 25 results</span>
+            <div class="form-group sort-select">
+              <select class="custom-select" name="sort" id="sort">
+                <option value="1"> Default Sorting</option>
+                <option value="2"> Sort By Popularity</option>
+                <option value="3"> Sort By Average Rating</option>
+                <option value="4"> Sort By Latest</option>
+                <option value="5"> Sort By Price:Low To High</option>
+                <option value="6"> Sort By Price:High To Low</option>
+              </select>
+            </div>
+            <div class="change-view-icons">
+              <i class="fas fa-th"></i> <i class="fas fa-list"></i>
+            </div>
+          </div>
+        </section>
+
       </div>
-    </aside>
+    </div>
 
 
   </article>

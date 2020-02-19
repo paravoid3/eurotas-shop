@@ -6,6 +6,12 @@ colors.forEach((color, idx) => {
   color.style.backgroundColor = colorArray[idx];
 });
 
+let range = document.querySelector("input[type=range]");
+let price = document.querySelector(".price-number");
+
+range.addEventListener('input', () => {
+  price.textContent = `$0 - $${range.value}`
+})
 
 
 // navbar scroll
