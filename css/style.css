@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
 
+:root {
+  --hoverColor: #c50215;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -25,10 +29,18 @@ header {
   margin: auto;
 }
 
-.bgimg img {
+.bgimg img{
+  margin-top: 80px;
+}
+
+.bgimg img,
+.product-img img {
   max-width: 100%;
   height: auto;
-  /* object-fit: cover; */
+}
+
+.navbar {
+  background: black;
 }
 
 .navbar .navbar-brand .brand {
@@ -37,17 +49,18 @@ header {
 
 .heading {
   position: absolute;
-  left: 45%;
-  top: 35%;
+  left: 40%;
+  top: 45%;
   color: white;
 }
 
 .heading h1 {
   font-size: 3em;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   letter-spacing: 3px;
 }
+
 .heading p {
   font-size: 1em;
   font-weight: 100;
@@ -57,9 +70,17 @@ header {
   font-weight: bold;
 }
 
-.aside-content .categories .nav .nav-item {
-  padding: 10px 0;
+.aside-content .categories .nav .nav-link {
+ text-decoration: none;
+ padding: 10px 0;
+ color: black;
+ transition: color .5s ease;
 }
+
+.aside-content .categories .nav .nav-link:hover {
+  color: var(--hoverColor);
+ }
+
 
 .aside-content .price-filter .btn {
   font-size: 16px;
@@ -235,34 +256,95 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .aside-content .size-filter .sizes div:hover {
-  color: crimson;
+  color: var(--hoverColor);
 }
 
 .aside-content .product-tags .tags span {
-  display: block;
   font-size: 14px;
   background: #ebebeb;
-  margin-bottom: 1em;
+  margin:  0 .5em .5em 0;
   padding: 15px 20px;
+}
+
+.section-content .change-view-icons i {
+  padding: 1.2em;
+  color: white;
+  background: var(--hoverColor);
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.section-content .change-view-icons i:last-child {
+  background: #ebebeb;
+  color: black;
+}
+
+.section-content .product-info h4 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.section-content .product-info span {
+  color: var(--hoverColor);
+  font-weight: bold;
 }
 
 
 
+
+
+.jumbotron {
+  background: #222;
+}
+
+.footer-content .nav h4 {
+  color: white;
+}
+
+.footer-content .nav .nav-link {
+  padding-left: 0;
+  color: #aaa;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-content + .footer-content .nav .nav-link {
+  transition: transform, color, .4s ease;
+}
+
+.footer-content + .footer-content .nav .nav-link:hover {
+  color: var(--hoverColor);
+  transform: translateX(10px);
+}
+
+.footer-content .nav:first-child .nav-item:last-child i {
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+.dark-footer {
+  background: #111;
+  color: #aaa;
+}
+
+.dark-footer .nav .nav-link{
+  color: #aaa;
+  padding: 8px 8px;
+  margin: 0 5px;
+  transition: color .3s ease-in; 
+}
+
+.dark-footer .nav .nav-link:hover{
+  color: var(--hoverColor);
+}
 
 
 
 
 /* FOR TABLET SCREEN SIZES */
 @media screen and (min-width: 768px) {
-  .heading h1 {
-    font-size: 3.5em;
-    font-weight: bold;
-    margin-bottom: 20px;
-    letter-spacing: 3px;
-  }
-  .heading p {
-    font-size: 1.5em;
-    font-weight: 100;
+  .heading {
+    left: 45%;
   }
 }
 
@@ -306,15 +388,37 @@ input[type=range]:focus::-ms-fill-upper {
         margin-left: 15px;
     }
 
+    .navbar {
+      background: none;
+      transition: background .3s ease;
+    }
 
+    .heading h1 {
+      font-size: 3.5em;
+    }
+    .heading p {
+      font-size: 1.5em;
+    }
+
+    .scrolled {
+      background: rgba(0, 0, 0, 0.85)
+    }
+
+    .bgimg img{
+      margin-top: 0;
+    }
+    .heading {
+      left: 45%;
+      top: 40%;
+    }
 }
 
 
 /* navbar adjustment */
 @media screen and (max-width: 1036px) and (min-width: 992px) {
-    .navbar ul {
-        visibility: hidden;
-    }
+    /* .navbar ul {
+        max-width: 100%;
+    } */
 
     .navbar-expand-lg .navbar-nav .nav-link {
         padding: 0;

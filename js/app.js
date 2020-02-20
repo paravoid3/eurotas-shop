@@ -14,8 +14,9 @@ range.addEventListener('input', () => {
 })
 
 
-// navbar scroll
+// navbar scroll effect
   $(document).scroll(function () {
     var $nav = $(".navbar-fixed-top");
     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    console.log($(this));
   });
